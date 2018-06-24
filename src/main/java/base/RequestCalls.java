@@ -63,10 +63,10 @@ public class  RequestCalls {/*
 		log.info("Inside GETRequest call");
 		RequestSpecification requestSpecification = RestAssured.given();
 		requestSpecification.contentType(ContentType.JSON);
-		requestSpecification.param("at", getAt());
-		requestSpecification.param("q", getQ() );
-		requestSpecification.param("app_id", getApp_id());
-		requestSpecification.param("app_code", getApp_code());
+		requestSpecification.queryParam("at", getAt());
+		requestSpecification.queryParam("q", getQ() );
+		requestSpecification.queryParam("app_id", getApp_id());
+		requestSpecification.queryParam("app_code", getApp_code());
 		
 		Response response = requestSpecification.get(uRI);
 		log.debug(requestSpecification.log().all());

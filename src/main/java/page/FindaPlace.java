@@ -17,7 +17,7 @@ public class FindaPlace {
 		
 		log.info("Starting Test Case : Find a Place");
 				
-		String endPointURI = EndPointUrl.getEndPoint("40.74917,-73.98529","chrysler", "jTPyEHU0l2FmCr10ny4Q", "Mdaab_RmdxrIhVIxmZ5vmA");
+		String endPointURI = EndPointUrl.getEndPoint("56.1103,47.47064","dallas", "jTPyEHU0l2FmCr10ny4Q", "Mdaab_RmdxrIhVIxmZ5vmA");
 		response = RequestCalls.GETRequest(endPointURI);
 		log.info(response.getBody().asString());
 		String strResponse = TestUtils.getResposeString(response);
