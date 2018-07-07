@@ -11,11 +11,11 @@ public class EndPointUrl {
 	// https://places.cit.api.here.com/places/v1/autosuggest?at=40.74917,-73.98529&q=chrysler&app_id=mYAPPId&app_code=MyAPPcode
 	public String q, at, app_id, app_code;
 
-	public static String getEndPoint(String longLat, String placeName, String appId, String appCode) {
+	public static String getEndPoint(String resource, String longLat, String placeName, String appId, String appCode) {
 		RequestCalls requestCalls = new RequestCalls(longLat, placeName, appId, appCode);
 
-		log.info("Base URI : " + URL + "browse?" + "at=" + RequestCalls.getAt() + "&" + "q=" + RequestCalls.getQ() + "&"
-				+ "app_id=" + RequestCalls.getApp_id() + "&" + "app_code=" + RequestCalls.getApp_code());
+		log.info("Base URI : " + URL + resource + "?" + "at=" + RequestCalls.getAt() + "&" + "q=" + RequestCalls.getQ()
+				+ "&" + "app_id=" + RequestCalls.getApp_id() + "&" + "app_code=" + RequestCalls.getApp_code());
 		String URI = URL + "browse?" + "at=" + RequestCalls.getAt() + "&" + "q=" + RequestCalls.getQ() + "&" + "app_id="
 				+ RequestCalls.getApp_id() + "&" + "app_code=" + RequestCalls.getApp_code();
 		return URI;
